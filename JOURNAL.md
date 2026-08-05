@@ -56,7 +56,7 @@ I briefly ran into a blocker with the testing framework—the course guide refer
 
 **PR link:** [Insert link to your submitted pull request here]
 
-**Branch:** [`feat/102-comparison-view`]
+**Branch:** [`feat/102-compare-reviews-view`]
 
 **What you built:**
 I built a progress-tracking feature that allows users to visualize how their portfolio reviews have changed over time. The feature introduces a new `ComparisonView` page that fetches the user's review history, lets them select an older and newer review via dropdowns, and renders a side-by-side visual difference. It calculates absolute score deltas (highlighting improvements in green and regressions in red) and highlights whether written feedback was updated.
@@ -70,3 +70,35 @@ I created a new test suite at `frontend/src/components/__tests__/DiffFormatter.t
 *(Note: I observed 182 linting errors and 2 test failures in `ProfileForm.test.tsx` and `ReviewSection.test.tsx` upon creating my branch. My code introduces no new failures to the baseline).*
 
 **Draft PR feedback received from:** [Insert name, Discord handle, or "none"]
+
+## Week 10 — Iteration & reflection
+
+### Reviewer feedback
+
+**Feedback received:** [ ] Yes  [X] No — still awaiting review
+
+**Summary of feedback:**
+[What did reviewers comment on? Or note that no review came in.]
+
+**How you responded:**
+[What changes did you make, or what did you reply? If no feedback,
+leave blank.]
+
+---
+
+### Reflection
+
+**What was harder than you expected?**
+I am familiar with typescript setups and how that works but I was surprised how many files did need to modified not just the new logic for the pr but also for the test, hunting down the right test files and what package they use took a bit.
+
+**What did you learn about working in a large codebase?**
+This isn't my first time doing an open-source contribution, but I think what I relearned is each codebase maintains a different set of standard and rules, so it's very important to understand the structure, what's expected of a good pr, and conventions before diving into any code writing.
+
+**How did AI tools help — and where did they fall short?**
+AI was very helpful in generating the code. Guiding the AI to generate the right code, right tests, and just working on the stated problem probably took more time to verifying outputs at times. But this is where learning what model is right for the problem comes to play, usually using a smaller model for a well scoped task gave less issues, and a larger one for design choices.
+
+**What would you do differently if you started over?**
+One thing I would change is how AI was used, currently I did a more standard approach of ai and verify what it writes, but something I've read is a test-driven approach (TDD) is generally better at keeping the llm more grounded in it's approach. Definitely something I would try to see how different approaches to AI affect the output and flow.
+
+**What are you most proud of from this module?**
+I am genuinely proud for actually learning, none of these topics are themselves ground breaking and often written as short articles I can read many of. But slowing down and actually doing (not jsut following a well made tutorial) did force me to better understand certain decisions and concepts, like rag and decided what results to pull; doing a math based approach or just setting k to a value are both valid and deciding on one requires understand what is most important in the system being built.
